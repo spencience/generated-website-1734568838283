@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - RequestBlocker</title>
+    <meta name="description" content="Comprehensive analytics and insights for your blocked requests, security patterns, and threat detection metrics.">
+    <meta name="keywords" content="request blocker, security analytics, threat detection, web security, request monitoring">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-red-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <nav class="flex items-center justify-between">
+                <a href="/generated-website-1734568838283/dashboard.html" class="text-xl font-bold">RequestBlocker</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/generated-website-1734568838283/dashboard.html" class="hover:text-red-200">Dashboard</a>
+                    <a href="/generated-website-1734568838283/analytics.html" class="hover:text-red-200">Analytics</a>
+                    <a href="/generated-website-1734568838283/rules.html" class="hover:text-red-200">Rules</a>
+                    <a href="/generated-website-1734568838283/logs.html" class="hover:text-red-200">Logs</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="space-y-6">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-2xl font-bold text-gray-800">Analytics Overview</h1>
+                    <div class="flex space-x-4">
+                        <select class="border rounded px-3 py-2">
+                            <option>Last 24 Hours</option>
+                            <option>Last 7 Days</option>
+                            <option>Last 30 Days</option>
+                            <option>Custom Range</option>
+                        </select>
+                        <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Export Report</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold text-red-700">Total Blocked Requests</h3>
+                        <p class="text-3xl font-bold text-red-800 mt-2">15,487</p>
+                        <p class="text-sm text-red-600 mt-1">↑ 12% from previous period</p>
+                    </div>
+                    <div class="bg-orange-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold text-orange-700">Threat Score</h3>
+                        <p class="text-3xl font-bold text-orange-800 mt-2">76/100</p>
+                        <p class="text-sm text-orange-600 mt-1">Medium Risk Level</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold text-green-700">Protected Endpoints</h3>
+                        <p class="text-3xl font-bold text-green-800 mt-2">142</p>
+                        <p class="text-sm text-green-600 mt-1">All endpoints secure</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h2 class="text-xl font-semibold text-gray-800">Request Analysis</h2>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="h-64 bg-white rounded-lg border p-4">
+                            <!-- Placeholder for chart -->
+                            <div class="w-full h-full flex items-center justify-center text-gray-400">
+                                Interactive Analytics Chart
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-4 rounded-lg border">
+                            <h3 class="text-lg font-semibold mb-4">Top Blocked IP Addresses</h3>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span>192.168.1.100</span>
+                                    <span class="text-red-600">2,341 blocks</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>10.0.0.15</span>
+                                    <span class="text-red-600">1,892 blocks</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>172.16.0.25</span>
+                                    <span class="text-red-600">1,544 blocks</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-lg border">
+                            <h3 class="text-lg font-semibold mb-4">Common Attack Patterns</h3>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span>SQL Injection Attempts</span>
+                                    <span class="text-red-600">45%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>XSS Attacks</span>
+                                    <span class="text-red-600">32%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Path Traversal</span>
+                                    <span class="text-red-600">23%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-sm">
+                    &copy; 2024 RequestBlocker. All rights reserved.
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="/generated-website-1734568838283/privacy.html" class="hover:text-gray-300">Privacy Policy</a>
+                    <a href="/generated-website-1734568838283/terms.html" class="hover:text-gray-300">Terms of Service</a>
+                    <a href="/generated-website-1734568838283/contact.html" class="hover:text-gray-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

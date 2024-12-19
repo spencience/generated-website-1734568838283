@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules Management - RequestBlocker</title>
+    <meta name="description" content="Configure and manage request blocking rules to protect your application from unwanted traffic and potential threats">
+    <meta name="keywords" content="request blocking, security rules, traffic management, web security, request filter">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-red-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <nav class="flex items-center justify-between">
+                <a href="/generated-website-1734568838283/dashboard.html" class="text-xl font-bold">RequestBlocker</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/generated-website-1734568838283/dashboard.html" class="hover:text-red-200">Dashboard</a>
+                    <a href="/generated-website-1734568838283/analytics.html" class="hover:text-red-200">Analytics</a>
+                    <a href="/generated-website-1734568838283/rules.html" class="hover:text-red-200 font-bold">Rules</a>
+                    <a href="/generated-website-1734568838283/logs.html" class="hover:text-red-200">Logs</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden bg-red-500 hidden">
+        <a href="/generated-website-1734568838283/dashboard.html" class="block px-4 py-2 text-white hover:bg-red-600">Dashboard</a>
+        <a href="/generated-website-1734568838283/analytics.html" class="block px-4 py-2 text-white hover:bg-red-600">Analytics</a>
+        <a href="/generated-website-1734568838283/rules.html" class="block px-4 py-2 text-white hover:bg-red-600">Rules</a>
+        <a href="/generated-website-1734568838283/logs.html" class="block px-4 py-2 text-white hover:bg-red-600">Logs</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="space-y-6">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-2xl font-bold text-gray-800">Rules Management</h1>
+                    <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Add New Rule</button>
+                </div>
+
+                <!-- Rules List -->
+                <div class="space-y-4">
+                    <!-- Rule Item -->
+                    <div class="border rounded-lg p-4 hover:bg-gray-50">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-lg">Block High-Frequency Requests</h3>
+                                <p class="text-gray-600">Blocks IPs making more than 100 requests per minute</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="px-2 py-1 bg-green-100 text-green-800 rounded">Active</span>
+                                <button class="text-gray-400 hover:text-gray-600">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rule Item -->
+                    <div class="border rounded-lg p-4 hover:bg-gray-50">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-lg">Geographic Restriction</h3>
+                                <p class="text-gray-600">Block requests from specified countries</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="px-2 py-1 bg-red-100 text-red-800 rounded">Inactive</span>
+                                <button class="text-gray-400 hover:text-gray-600">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rule Item -->
+                    <div class="border rounded-lg p-4 hover:bg-gray-50">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-semibold text-lg">Suspicious User Agents</h3>
+                                <p class="text-gray-600">Block requests with known malicious user agents</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="px-2 py-1 bg-green-100 text-green-800 rounded">Active</span>
+                                <button class="text-gray-400 hover:text-gray-600">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-sm">
+                    &copy; 2024 RequestBlocker. All rights reserved.
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="/generated-website-1734568838283/privacy.html" class="hover:text-gray-300">Privacy Policy</a>
+                    <a href="/generated-website-1734568838283/terms.html" class="hover:text-gray-300">Terms of Service</a>
+                    <a href="/generated-website-1734568838283/contact.html" class="hover:text-gray-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

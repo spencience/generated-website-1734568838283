@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Dashboard - RequestBlocker</title>
+    <meta name="description" content="Monitor and manage blocked requests across your system with real-time analytics and detailed insights">
+    <meta name="keywords" content="security dashboard, request blocking, security monitoring, web security">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-red-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <nav class="flex items-center justify-between">
+                <a href="/generated-website-1734568838283/dashboard.html" class="text-xl font-bold">RequestBlocker</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/generated-website-1734568838283/dashboard.html" class="hover:text-red-200">Dashboard</a>
+                    <a href="/generated-website-1734568838283/analytics.html" class="hover:text-red-200">Analytics</a>
+                    <a href="/generated-website-1734568838283/rules.html" class="hover:text-red-200">Rules</a>
+                    <a href="/generated-website-1734568838283/logs.html" class="hover:text-red-200">Logs</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden bg-red-500 hidden">
+        <a href="/generated-website-1734568838283/dashboard.html" class="block px-4 py-2 text-white hover:bg-red-600">Dashboard</a>
+        <a href="/generated-website-1734568838283/analytics.html" class="block px-4 py-2 text-white hover:bg-red-600">Analytics</a>
+        <a href="/generated-website-1734568838283/rules.html" class="block px-4 py-2 text-white hover:bg-red-600">Rules</a>
+        <a href="/generated-website-1734568838283/logs.html" class="block px-4 py-2 text-white hover:bg-red-600">Logs</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Summary Card -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Today's Summary</h2>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">Total Requests</span>
+                        <span class="font-semibold text-gray-800">1,234</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">Blocked Requests</span>
+                        <span class="font-semibold text-red-600">89</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">Success Rate</span>
+                        <span class="font-semibold text-green-600">92.8%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Blocks -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Recent Blocks</h2>
+                <div class="space-y-3">
+                    <div class="p-3 bg-red-50 rounded-lg">
+                        <p class="text-sm text-red-700">Suspicious IP: 192.168.1.100</p>
+                        <p class="text-xs text-gray-500">2 minutes ago</p>
+                    </div>
+                    <div class="p-3 bg-red-50 rounded-lg">
+                        <p class="text-sm text-red-700">Invalid Authentication</p>
+                        <p class="text-xs text-gray-500">5 minutes ago</p>
+                    </div>
+                    <div class="p-3 bg-red-50 rounded-lg">
+                        <p class="text-sm text-red-700">Rate Limit Exceeded</p>
+                        <p class="text-xs text-gray-500">15 minutes ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Quick Actions</h2>
+                <div class="space-y-3">
+                    <a href="/generated-website-1734568838283/rules/create.html" class="block w-full text-center bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">Create New Rule</a>
+                    <a href="/generated-website-1734568838283/logs/export.html" class="block w-full text-center bg-gray-600 text-white py-2 rounded-lg hover:bg-gray-700">Export Logs</a>
+                    <a href="/generated-website-1734568838283/settings.html" class="block w-full text-center border border-gray-300 text-gray-700 py-2 rounded-lg hover:bg-gray-50">Settings</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-sm">
+                    &copy; 2024 RequestBlocker. All rights reserved.
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="/generated-website-1734568838283/privacy.html" class="hover:text-gray-300">Privacy Policy</a>
+                    <a href="/generated-website-1734568838283/terms.html" class="hover:text-gray-300">Terms of Service</a>
+                    <a href="/generated-website-1734568838283/contact.html" class="hover:text-gray-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

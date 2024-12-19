@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Logs | RequestBlocker</title>
+    <meta name="description" content="View and analyze blocked request logs, security events, and system activity in real-time">
+    <meta name="keywords" content="request logs, security monitoring, blocked requests, system logs, security events">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-red-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <nav class="flex items-center justify-between">
+                <a href="/generated-website-1734568838283/dashboard.html" class="text-xl font-bold">RequestBlocker</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/generated-website-1734568838283/dashboard.html" class="hover:text-red-200">Dashboard</a>
+                    <a href="/generated-website-1734568838283/analytics.html" class="hover:text-red-200">Analytics</a>
+                    <a href="/generated-website-1734568838283/rules.html" class="hover:text-red-200">Rules</a>
+                    <a href="/generated-website-1734568838283/logs.html" class="hover:text-red-200 font-bold">Logs</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden bg-red-500 hidden">
+        <a href="/generated-website-1734568838283/dashboard.html" class="block px-4 py-2 text-white hover:bg-red-600">Dashboard</a>
+        <a href="/generated-website-1734568838283/analytics.html" class="block px-4 py-2 text-white hover:bg-red-600">Analytics</a>
+        <a href="/generated-website-1734568838283/rules.html" class="block px-4 py-2 text-white hover:bg-red-600">Rules</a>
+        <a href="/generated-website-1734568838283/logs.html" class="block px-4 py-2 text-white hover:bg-red-600">Logs</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-bold text-gray-800">System Logs</h1>
+                <div class="flex space-x-4">
+                    <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Export Logs</button>
+                    <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300">Clear Logs</button>
+                </div>
+            </div>
+
+            <!-- Log Filters -->
+            <div class="mb-6 flex flex-wrap gap-4">
+                <select class="border rounded px-3 py-2">
+                    <option>All Severity Levels</option>
+                    <option>Critical</option>
+                    <option>Warning</option>
+                    <option>Info</option>
+                </select>
+                <select class="border rounded px-3 py-2">
+                    <option>Last 24 Hours</option>
+                    <option>Last 7 Days</option>
+                    <option>Last 30 Days</option>
+                    <option>Custom Range</option>
+                </select>
+                <input type="text" placeholder="Search logs..." class="border rounded px-3 py-2 flex-grow">
+            </div>
+
+            <!-- Log Table -->
+            <div class="overflow-x-auto">
+                <table class="min-w-full">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Timestamp</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Level</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Source IP</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Event</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rule</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">2024-01-20 15:42:33</td>
+                            <td class="px-6 py-4 whitespace-nowrap"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Critical</span></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">192.168.1.100</td>
+                            <td class="px-6 py-4 text-sm">Suspicious POST request blocked</td>
+                            <td class="px-6 py-4 text-sm">SQL Injection Prevention</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">2024-01-20 15:40:12</td>
+                            <td class="px-6 py-4 whitespace-nowrap"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Warning</span></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">192.168.1.105</td>
+                            <td class="px-6 py-4 text-sm">Rate limit exceeded</td>
+                            <td class="px-6 py-4 text-sm">Rate Limiting</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">2024-01-20 15:38:45</td>
+                            <td class="px-6 py-4 whitespace-nowrap"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Info</span></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">192.168.1.102</td>
+                            <td class="px-6 py-4 text-sm">New rule added</td>
+                            <td class="px-6 py-4 text-sm">System Config</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex items-center justify-between mt-6">
+                <div class="text-sm text-gray-700">
+                    Showing <span class="font-medium">1</span> to <span class="font-medium">10</span> of <span class="font-medium">50</span> results
+                </div>
+                <div class="flex space-x-2">
+                    <button class="px-3 py-1 border rounded text-sm">Previous</button>
+                    <button class="px-3 py-1 border rounded bg-red-600 text-white">1</button>
+                    <button class="px-3 py-1 border rounded">2</button>
+                    <button class="px-3 py-1 border rounded">3</button>
+                    <button class="px-3 py-1 border rounded">Next</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-sm">
+                    &copy; 2024 RequestBlocker. All rights reserved.
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="/generated-website-1734568838283/privacy.html" class="hover:text-gray-300">Privacy Policy</a>
+                    <a href="/generated-website-1734568838283/terms.html" class="hover:text-gray-300">Terms of Service</a>
+                    <a href="/generated-website-1734568838283/contact.html" class="hover:text-gray-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
